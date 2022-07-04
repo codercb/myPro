@@ -62,6 +62,7 @@
 
 <style scoped>
   #profile {
+    padding-top:44px;
     background-color: #f2f2f2;
   }
 

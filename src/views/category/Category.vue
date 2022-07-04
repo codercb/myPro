@@ -8,7 +8,7 @@
       <scroll id="tab-content" :data="[categoryData]">
         <div>
           <tab-content-category :subcategories="showSubcategory"></tab-content-category>
-          <tab-control :titles="['综合', '新品', '销量']"
+          <tab-control class="tab-control" :titles="['综合', '新品', '销量']"
                        @itemClick="tabClick"></tab-control>
           <tab-content-detail :category-detail="showCategoryDetail"></tab-content-detail>
         </div>
@@ -115,9 +115,9 @@
 </script>
 
 <style scoped>
-  #category {
+  /* #category {
     height: 100vh;
-  }
+  } */
 
   .nav-bar {
     background-color: var(--color-tint);
@@ -126,7 +126,7 @@
   }
 
   .content {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 44px;
@@ -136,7 +136,7 @@
   }
 
   #tab-content {
-    height: 100%;
+    /* height: 100%; */
     flex: 1;
   }
 </style>

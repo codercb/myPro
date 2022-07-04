@@ -3,7 +3,7 @@
     <div class="tab-control-item"
          :class="{active: currentIndex === index}"
          @click="itemClick(index)"
-         v-for="(item, index) in titles">
+         v-for="(item, index) in titles" :key="item">
       <span>{{item}}</span>
     </div>
   </div>
@@ -41,6 +41,7 @@
   .tab-control {
     display: flex;
     text-align: center;
+    height:40px;
     line-height: 40px;
     font-size: 15px;
     background-color: #fff;

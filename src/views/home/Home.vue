@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <nav-bar class="nav-bar"><div slot="center">购物街</div></nav-bar>
-    <tab-control v-show="isTabFixed" class="fixed" @itemClick="tabClick"
+    <tab-control v-show="isTabFixed" class="tab-control" @itemClick="tabClick"
                  :titles="['流行', '新款', '精选']"></tab-control>
     <scroll class="content"
             ref="scroll"
@@ -146,14 +146,16 @@
 
 <style scoped>
   #home {
-    /*position: relative;*/
-    height: 100vh;
+    position: relative;
+    padding-top:44px;
+    /* height: 100vh; */
   }
 
   .nav-bar {
     background-color: var(--color-tint);
     font-weight: 700;
     color: #fff;
+    
   }
 
   .content {
@@ -164,8 +166,8 @@
     right: 0;
   }
 
-  .fixed {
-    position: fixed;
+  .tab-control {
+    position: sticky;
     top: 44px;
     left: 0;
     right: 0;
